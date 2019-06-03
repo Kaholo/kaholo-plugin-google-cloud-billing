@@ -1,0 +1,39 @@
+{
+  "name": "google-cloud-billing",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "imgUrl": "icon.png",
+  "version": "1.0.0",
+  "description": "GCP cloud billing",
+  "settings": [
+    {
+      "name": "CREDENTIALS",
+      "viewName": "Credentials",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name": "updateBillingInfo",
+      "viewName": "Update billing info",
+      "params": [
+        {
+          "name": "CREDENTIALS",
+          "viewName": "Credentials",
+          "type": "vault"
+        },
+        {
+          "name": "RESOURCENAME",
+          "viewName": "Resource name",
+          "type": "string"
+        },
+        {
+          "name": "BILLINGACCOUNTNAME",
+          "viewName": "Billing account ID",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
